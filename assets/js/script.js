@@ -1,7 +1,14 @@
 //vars
 //  select dom elements\
-  // start button
-  // reset button
+var startButton = document.querySelector(".start-button")
+var resetButton = document.querySelector(".reset-button")
+var timerEL = document.querySelector(".timer")
+var wordBlanksEl = document.querySelector(".word-blanks")
+var winsEl = document.querySelector(".win")
+var lossesEl = document.querySelector(".lose")
+
+console.log(startButton, resetButton, timerEL,wordBlanksEl, winsEl,lossesEl)
+
   // count down timer
   // word-blanks
   // win counter
