@@ -12,10 +12,25 @@ var words = ["bacon", "pancakes", "waffels", "eggs", "cheese"]
 var userGuesses = [] //list of letters guessed by user
 var answer
 
+function getRandomWord() {
+  var randomIdx = Math.floor(Math.random() * words.length)
+  answer = words[randomIdx]
+}
+
+function renderWord() {
+  var blanks = ""
+  for (var i = 0; i < answer.length; i++) {
+    blanks += "_"
+  }
+  wordBlanksEl.innerText = blanks.split('').join(' ')
+  
+}
+
 function startRound() {
-  // start timer
-  console.log("starting Round")  // pick a random word
-  // set word-blanks to have ___'s
+  console.log("starting Round")  
+  // TODO: start timer
+  getRandomWord()
+  renderWord()
 }
 
 function onKeydown(event) {
